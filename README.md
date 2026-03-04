@@ -148,8 +148,9 @@ GROQ_API_KEY=your_key
 ```
 
 5. Deploy 🎉
-
-
+```
+https://personal-chatbot-nextjs-shad-cn-ui.vercel.app
+```
 ---
 
 # 👨‍💻 Author
