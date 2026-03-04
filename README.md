@@ -1,36 +1,158 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🤖 Personal Chatbot
 
-## Getting Started
+A modern AI Chatbot built using:
 
-First, run the development server:
+* ⚡ Next.js 14 (App Router)
+* 🟦 TypeScript
+* 🎨 Tailwind CSS
+* 🧩 shadcn/ui
+* 🔁 Custom Hook (useChat)
+* 🌍 Groq Free AI API
+* 📦 Axios
+
+Supports:
+
+* 🇬🇧 English Mode
+* 🇧🇩 Bengali Mode
+* 📱 Mobile Friendly UI
+
+---
+
+# 🚀 Live Features
+
+✅ Clean component-based architecture
+✅ Custom hook for chat logic
+✅ API Route integration
+✅ Language switching
+
+---
+
+# 📁 Project Structure
+
+```
+/src
+  /app
+    /api/chat/route.ts
+    /page.tsx
+    /layout.tsx
+    /globals.css
+
+  /components
+    /ui     #shadcn ui components
+    ChatContainer.tsx
+    ChatInput.tsx
+    MessageBubble.tsx
+
+  /hooks
+    useChat.ts
+
+  /lib
+    utils.ts
+```
+
+---
+
+# 🛠️ Installation Guide
+
+## 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/TanmayShil/personal_chatbot_nextjs_shadCnUI.git
+cd personal_chatbot_nextjs_shadCnUI
+```
+
+---
+
+## 2️⃣ Install Dependencies
+
+```bash
+npm install
+```
+
+---
+
+## 3️⃣ Setup Environment Variables
+
+Create a `.env.local` file in root directory:
+
+```
+GROQ_API_KEY=your_groq_api_key_here
+```
+
+Get your free API key from:
+
+👉 [https://console.groq.com](https://console.groq.com)
+
+---
+
+## 4️⃣ Run Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+# 🧠 How It Works
 
-To learn more about Next.js, take a look at the following resources:
+```
+User → Custom Hook (useChat)
+     → Axios → Next.js API Route
+     → Groq API
+     → Response → UI
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# 🌍 Language Mode System
 
-## Deploy on Vercel
+We dynamically control AI response language using system prompts:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```ts
+const systemPrompt =
+  language === "bengali"
+    ? "Reply in natural conversational Bengali."
+    : "Reply in English.";
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+# 📦 Tech Stack Details
+
+| Technology   | Purpose       |
+| ------------ | ------------- |
+| Next.js      | Framework     |
+| TypeScript   | Type Safety   |
+| Tailwind CSS | Styling       |
+| shadcn/ui    | UI Components |
+| Axios        | HTTP Client   |
+| Groq API     | AI Model      |
+
+---
+
+# 🚀 Deployment (Vercel)
+
+1. Push project to GitHub
+2. Go to [https://vercel.com](https://vercel.com)
+3. Import repository
+4. Add Environment Variable:
+
+```
+GROQ_API_KEY=your_key
+```
+
+5. Deploy 🎉
+
+
+---
+
+# 👨‍💻 Author
+
+Built by Tanmay 🚀
+If you like this project, give it a ⭐ on GitHub!
